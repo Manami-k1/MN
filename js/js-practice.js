@@ -36,8 +36,15 @@ document.write("Hello World!");
 
 let age = 30;
 const name = "田中太郎";
+
 console.log(`${name}さんの年齢は${age}です`);
+
 age = age + 2;
 
 console.log(`${name}さんの年齢は${age}です`);
 
+// ES6 or ES2015　バージョン
+// ver 変数名/定数　使わない
+// 可読性のため、変数は使いすぎない方がいい
+// 'use strict' 曖昧な記述を全てエラーで表示
+// 構文はシングルコーテーションでくくる
