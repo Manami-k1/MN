@@ -62,7 +62,7 @@ div.box6{
     top: 105px;
     margin: 5px;
 }
-div.box8{
+div.box7{
     height: 100px;
     width: 100px;
     background-color: green;
@@ -71,4 +71,9 @@ div.box8{
     left: 0px;
     top: 105;
     margin: 5px;
+}
+div.title{
+    background-color: yellow;
+    padding: 10px;
+    margin 10px;
 }
