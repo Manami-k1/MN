@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=drice-widch,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible"　content="ie=edge">
     <title>ボックスモデルの練習</title>
-    <style type="test/css">
+    <style type="text/css">
     body{
         padding: 5px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -16,26 +16,31 @@
     }
     div.header{
         background-image: url("img/oboe.jpg");
-        height: 200px;
+        background-repeat : no-repeat;
+        background-size : contain;
+        height: 230px;
         width: auto;
-        }
-        div.title{
-            background-color: black;
-            height: 40px;
-            width: auto;
-            line-height: 40px;
-            font-size: 20px;
-            color: ivory;
-            display: flex;
-            justify-content: center;
-        }
+    }
+    div.title{
+        background-color: black;
+        height: 40px;
+        width: auto;
+        line-height: 40px;
+        font-size: 20px;
+        color: ivory;
+        display: flex;
+        justify-content: center;
+    }
     </style>
 </head>
 <body>
     <h1>ボックスモデルの練習</h1>
+
     <div class="header">
         <div class="title">OBOE</div>
     </div>
-    <p>・・・</p>
+    <p>オーボエは、2枚のリードを使って音を出す、ダブルリードの楽器です。ダブルリードの楽器の歴史はたいへん古く、古代エジプトの壁画にもそうした楽器（葦笛）が描かれています。
+        その後、ダブルリードの楽器は野外楽器として発展し、世界中に広まって行きました。そのひとつがトルコのズルナという楽器。これがヨーロッパにも伝わり、オーボエの先祖になったといわれています。・・・<a href="https://www.yamaha.com/ja/musical_instrument_guide/">楽器解体全書より</a>
+    </p>
 </body>
 </html>
