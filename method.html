@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>関数とクラス</title>
+</head>
+<body>
+    <h1>関数とクラス</h1>
+    <script>
+        'use strict';
+
+        // アロー関数
+        // () => {}
+        // =sum(A1:A2) ※A1=3　A2=4
+
+        // const addTwoNum = (x,y) => {
+        //     return x * y;
+        // }
+        // console.log(addTwoNum(3 ,4));
+
+        // const addTwoNum = (x,y) => {
+        //     return x + y
+        // }
+        
+        // クラスとは
+
+        // class  Cluculator {
+        //     constructor(x ,y) {
+        //         this.x = x;
+        //         this.y = y;
+        //     }
+        //     addTwoNum() {
+        //         return this.x + this.y;
+        //     }
+        // }
+
+        // const Calc1 = new Cluculator(3,4);　//インスタンス生成
+        // const Calc2 = new Cluculator(4,7);
+        // console.log(Calc1.addTwoNum());
+        // console.log(Calc2.addTwoNum(10,10));
+
+        // class SuperNaming {
+        //     constructor() {
+        //         this.name = "田中";
+        //     }
+        //     outputName() {
+        //         return this.name;
+        //     }
+        // }
+        // class SubGreeting extends SuperNaming {
+        //     outputName() {
+        //         return super.outputName() + "太郎";
+        //     }
+        //     outputHello() {
+        //         return "Hello!";
+        //     }
+        // }
+        // const Greeting = new SubGreeting;
+        // console.log(Greeting.outputHello() + Greeting.outputName());
+    
+    // 練習問題  
+    class Naming {
+        constructor(name) {
+            this.name = ["山田","田中","林",name]
+        }
+        result(i) {
+            return this.name[i]
+        }
+    } 
+    const outputName = new Naming("佐藤");
+    for(let i = 0; i < outputName.name.length; i++) {
+        console.log(outputName.result(i));
+    }
+
+           </script>
+</body>
+</html> 
