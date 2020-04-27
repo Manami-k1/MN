@@ -3,13 +3,14 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>ハンバーガーメニューの作成</title>
+    <title>ハンバーガーメニューの作成2</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <style type="text/css">
         body {
             padding: 0;
             margin: 0;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+            overflow: hidden; /* 横のスクロールはしない */
         }
         #main {
             background-color: #eee;
@@ -19,34 +20,53 @@
             top: 0;
             left: 0;
             padding: 8px;
-            z-index: 2;
+            z-index: 1;
             overflow: auto;
             box-sizing: border-box;
-            transition: .4s;
+            /* transition: .4s; */
+        }
+        #cover {
+            background-color: #000;
+            opacity: .6;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+            z-index: 2;
         }
         #menu {
             background-color: #4c80ee;
             color: #fff;
             position: absolute;
             top: 0;
-            right: 0;
+            left: -180px;
             padding: 8px;
             width: 180px;
             min-height: 100%;
             box-sizing: border-box;
-            z-index: 1;
+            z-index: 3;
+            transition: .4s;
         }
-        #open {
-            float: right;
+        #open, #close {
+            float: left;
             cursor :pointer;
         }
-        #main.menu-open{
-            left: -180px;
+        #cover.menu-open {
+            display: block;
         }
+        #menu.menu-open {
+            left: 0;
+        }
+        /* #main.menu-open{
+            left: -180px; */
+        /* } */
     </style>
 </head>
 <body>
    <div id="menu">
+       <i class="fa fa-times" id="close"></i>
        <ul>
            <li>Menu1</li>
            <li>Menu2</li>
@@ -69,19 +89,25 @@
         <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
         <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
    </div>
+   <div id="cover"></div>
    <script>
        'use strict';
 
        const open = document.getElementById('open');//いちいち使わなくていいよう定義
-       const main = document.getElementById('main');
+       const close = document.getElementById('close');//いちいち使わなくていいよう定義
+
+       const menu = document.getElementById('menu');
+       const cover = document.getElementById('cover');
 
        open.addEventListener ('click', () => {
-           if (main.className === 'menu-open'){
-            main.className = '';
-           } else {
-               main.className = 'menu-open';// atarasiikurasune-むの付与
-           }
-       });
+           //同じアイコンを使用していないのでIFがいらない
+               menu.className = 'menu-open';
+               cover.className = 'menu-open';// atarasiikurasune-むの付与
+           });
+       close.addEventListener ('click', () => {
+            menu.className = '';
+            cover.className = '';// atarasiikurasune-むの付与
+           });
 
    </script>
 </body>
