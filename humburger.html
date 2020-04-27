@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>ハンバーガーメニューの作成</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
     <style type="text/css">
         body {
             padding: 0;
@@ -18,7 +19,7 @@
             top: 0;
             left: 0;
             padding: 8px;
-            z-index: 1;
+            z-index: 2;
             overflow: auto;
         }
         #menu {
@@ -29,7 +30,13 @@
             right: 0;
             padding: 8px;
             width: 180px;
-            z-index: 2;
+            min-height: 100%;
+            z-index: 1;
+        }
+        #open {
+            float: right;
+            cursor :pointer;
+            z-index: 1;
         }
     </style>
 </head>
@@ -44,9 +51,9 @@
        </ul>
    </div>
    <div id="main">
+       <i class="fa fa-bars" id="open"></i>
         <h1>Hello!</h1>
-
-        <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
+        <p>Hello! <br>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
         <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
         <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
         <p>Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! Hello! </p>
